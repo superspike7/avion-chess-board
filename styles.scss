@@ -65,12 +65,16 @@ table {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: repeat(8, 1fr);
-		grid-auto-flow: column;
 
+		.square {
+			display: grid;
+			place-items: center;
+			font-size: 5rem;
+		}
 
 		.a, .c, .e, .g {
 			&:nth-child(odd) {
-				background-color: #393E46;
+				background-color: #00ADB5;
 			}
 
 			&:nth-child(even) {
@@ -80,7 +84,7 @@ table {
 
 		.b, .d, .f, .h {
 			&:nth-child(even) {
-				background-color: #393E46;
+				background-color: #00ADB5;
 			}
 
 			&:nth-child(odd) {
@@ -89,6 +93,34 @@ table {
 		}
 
 
+	}
+
+}
+
+@media (max-width: 768px) {
+	.main {
+		.board {
+			width: calc(100vw * .80);
+			height: calc(100vw * .80);
+
+			.square {
+				font-size: 4rem;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 550px) {
+	.main {
+		.board {
+			width: 400px;
+			height: 400px;
+
+			.square {
+				font-size: 3rem;
+			}
+		}
 	}
 
 }

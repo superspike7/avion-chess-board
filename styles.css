@@ -67,19 +67,42 @@ table {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  grid-auto-flow: column;
+}
+.main .board .square {
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
 }
 .main .board .a:nth-child(odd), .main .board .c:nth-child(odd), .main .board .e:nth-child(odd), .main .board .g:nth-child(odd) {
-  background-color: #393E46;
+  background-color: #00ADB5;
 }
 .main .board .a:nth-child(even), .main .board .c:nth-child(even), .main .board .e:nth-child(even), .main .board .g:nth-child(even) {
   background-color: #EEEEEE;
 }
 .main .board .b:nth-child(even), .main .board .d:nth-child(even), .main .board .f:nth-child(even), .main .board .h:nth-child(even) {
-  background-color: #393E46;
+  background-color: #00ADB5;
 }
 .main .board .b:nth-child(odd), .main .board .d:nth-child(odd), .main .board .f:nth-child(odd), .main .board .h:nth-child(odd) {
   background-color: #EEEEEE;
+}
+
+@media (max-width: 768px) {
+  .main .board {
+    width: 80vw;
+    height: 80vw;
+  }
+  .main .board .square {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 550px) {
+  .main .board {
+    width: 400px;
+    height: 400px;
+  }
+  .main .board .square {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
