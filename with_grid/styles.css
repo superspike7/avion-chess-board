@@ -72,6 +72,8 @@ table {
   display: grid;
   place-items: center;
   font-size: 5rem;
+  cursor: pointer;
+  user-select: none;
 }
 .main .board .a:nth-child(odd), .main .board .c:nth-child(odd), .main .board .e:nth-child(odd), .main .board .g:nth-child(odd) {
   background-color: #00ADB5;
@@ -97,8 +99,8 @@ table {
 }
 @media (max-width: 550px) {
   .main .board {
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
   }
   .main .board .square {
     font-size: 3rem;

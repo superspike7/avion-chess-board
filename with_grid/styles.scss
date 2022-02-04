@@ -70,6 +70,8 @@ table {
 			display: grid;
 			place-items: center;
 			font-size: 5rem;
+			cursor: pointer;
+			user-select: none;
 		}
 
 		.a, .c, .e, .g {
@@ -114,8 +116,8 @@ table {
 @media (max-width: 550px) {
 	.main {
 		.board {
-			width: 400px;
-			height: 400px;
+			width: 320px;
+			height: 320px;
 
 			.square {
 				font-size: 3rem;
