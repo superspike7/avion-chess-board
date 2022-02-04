@@ -64,25 +64,30 @@ table {
   width: 800px;
   box-shadow: 3px #111111;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  display: flex;
+  flex-direction: column;
 }
-.main .board .square {
+.main .board .row {
+  display: flex;
+  height: 12.5%;
+  align-items: stretch;
+}
+.main .board .row .square {
   display: grid;
   place-items: center;
   font-size: 5rem;
+  width: 12.5%;
 }
-.main .board .a:nth-child(odd), .main .board .c:nth-child(odd), .main .board .e:nth-child(odd), .main .board .g:nth-child(odd) {
+.main .board .row .a:nth-child(odd), .main .board .row .c:nth-child(odd), .main .board .row .e:nth-child(odd), .main .board .row .g:nth-child(odd) {
   background-color: #00ADB5;
 }
-.main .board .a:nth-child(even), .main .board .c:nth-child(even), .main .board .e:nth-child(even), .main .board .g:nth-child(even) {
+.main .board .row .a:nth-child(even), .main .board .row .c:nth-child(even), .main .board .row .e:nth-child(even), .main .board .row .g:nth-child(even) {
   background-color: #EEEEEE;
 }
-.main .board .b:nth-child(even), .main .board .d:nth-child(even), .main .board .f:nth-child(even), .main .board .h:nth-child(even) {
+.main .board .row .b:nth-child(even), .main .board .row .d:nth-child(even), .main .board .row .f:nth-child(even), .main .board .row .h:nth-child(even) {
   background-color: #00ADB5;
 }
-.main .board .b:nth-child(odd), .main .board .d:nth-child(odd), .main .board .f:nth-child(odd), .main .board .h:nth-child(odd) {
+.main .board .row .b:nth-child(odd), .main .board .row .d:nth-child(odd), .main .board .row .f:nth-child(odd), .main .board .row .h:nth-child(odd) {
   background-color: #EEEEEE;
 }
 
@@ -91,8 +96,8 @@ table {
     width: 80vw;
     height: 80vw;
   }
-  .main .board .square {
-    font-size: 4rem;
+  .main .board .row .square {
+    font-size: 8vw;
   }
 }
 @media (max-width: 550px) {
